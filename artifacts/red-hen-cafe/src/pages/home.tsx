@@ -10,6 +10,7 @@ import quicheImg from "../assets/quiche.png";
 import interiorImg from "../assets/interior.png";
 import displayCaseImg from "../assets/display-case.png";
 import storefrontImg from "../assets/storefront.png";
+import heroBgImg from "@assets/469102267_545950394972943_3540041843313371639_n_1775752436549.jpg";
 import logoImg from "@assets/312021854_121989427169656_1473103766871661946_n._1775752046583.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -103,10 +104,10 @@ export default function Home() {
             style={{ y: yHero }}
             className="absolute inset-0 z-0"
           >
-            <div className="absolute inset-0 bg-black/40 z-10" />
+            <div className="absolute inset-0 bg-black/55 z-10" />
             <img 
-              src={storefrontImg} 
-              alt="The Red Hen Cafe Storefront" 
+              src={heroBgImg} 
+              alt="The Red Hen Café & Bakery building exterior" 
               className="w-full h-full object-cover"
               data-testid="img-hero-bg"
             />
