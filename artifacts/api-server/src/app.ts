@@ -1,47 +1,57 @@
-import express, { Express, Request, Response, NextFunction } from "express";
-import cors from "cors";
-import router from "./routes";
-import { logger } from "./lib/logger";
+import express, { Router, Request, Response } from "express";
 
-const app: Express = express();
+const router: Router = express.Router();
 
-// Middleware
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// Simple logging middleware
-app.use((req: Request, res: Response, next: NextFunction) => {
-  logger.info(`${req.method} ${req.path}`);
-  next();
-});
-
-// Routes
-app.use("/api", router);
-
-// Health check endpoint
-app.get("/health", (req: Request, res: Response): void => {
-  res.status(200).json({
-    status: "ok",
-    timestamp: new Date().toISOString(),
+// Example API route
+router.get("/", (req: Request, res: Response): void => {
+  res.json({
+    message: "Welcome to Red Hen Café API",
+    version: "1.0.0",
   });
 });
 
-// 404 handler
-app.use((req: Request, res: Response): void => {
-  res.status(404).json({
-    error: "Not Found",
-    message: `Route ${req.method} ${req.path} not found`,
+// Menu endpoint
+router.get("/menu", (req: Request, res: Response): void => {
+  res.json({
+    items: [
+      {
+        id: 1,
+        name: "Fresh Baked Bread",
+        price: 5.99,
+        category: "bakery",
+      },
+      {
+        id: 2,
+        name: "Espresso",
+        price: 3.5,
+        category: "coffee",
+      },
+      {
+        id: 3,
+        name: "Pastry",
+        price: 4.99,
+        category: "bakery",
+      },
+    ],
   });
 });
 
-// Error handling middleware
-app.use((err: any, req: Request, res: Response, next: NextFunction): void => {
-  logger.error(err);
-  res.status(err.status || 500).json({
-    error: err.message || "Internal Server Error",
-    status: err.status || 500,
+// Gallery endpoint
+router.get("/gallery", (req: Request, res: Response): void => {
+  res.json({
+    images: [
+      {
+        id: 1,
+        title: "Coffee Setup",
+        url: "/images/coffee.jpg",
+      },
+      {
+        id: 2,
+        title: "Bakery",
+        url: "/images/bakery.jpg",
+      },
+    ],
   });
 });
 
-export default app;
+export default router;
