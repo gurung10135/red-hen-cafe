@@ -10,6 +10,7 @@ import quicheImg from "../assets/quiche.png";
 import interiorImg from "../assets/interior.png";
 import displayCaseImg from "../assets/display-case.png";
 import storefrontImg from "../assets/storefront.png";
+import logoImg from "@assets/312021854_121989427169656_1473103766871661946_n._1775752046583.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -79,6 +80,7 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50 transition-all duration-300">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
+            <img src={logoImg} alt="The Red Hen Café & Bakery logo" className="h-10 w-10 object-contain" data-testid="img-logo" />
             <span className="font-serif text-xl font-semibold text-primary tracking-tight" data-testid="text-logo">The Red Hen</span>
           </div>
           <nav className="hidden md:flex items-center gap-8">
@@ -227,7 +229,7 @@ export default function Home() {
         {/* Section 4: Menu Highlights */}
         <section id="menu" className="py-24 bg-[#FEFDFB]">
           <div className="container px-6 mx-auto">
-            <motion.div 
+            <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -235,68 +237,101 @@ export default function Home() {
               className="text-center max-w-2xl mx-auto mb-16 space-y-4"
             >
               <h2 className="text-4xl md:text-5xl font-serif text-foreground">Our Signatures</h2>
-              <p className="text-muted-foreground text-lg">Handcrafted daily using simple, honest ingredients. $10 - $20 per person.</p>
+              <p className="text-muted-foreground text-lg">Handcrafted daily using simple, honest ingredients.</p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Creamy Heart Latte",
-                  desc: "Rich espresso pulled over silky steamed milk, finished with our signature heart art.",
-                  img: latteImg,
-                  steam: true
-                },
-                {
-                  title: "Warm Cinnamon Rolls",
-                  desc: "Gooey, pull-apart dough baked fresh every morning and smothered in cream cheese icing.",
-                  img: cinnamonRollsImg,
-                  steam: false
-                },
-                {
-                  title: "Savory Quiche",
-                  desc: "Flaky, buttery crust filled with farm-fresh eggs, cheese, and seasonal vegetables.",
-                  img: quicheImg,
-                  steam: true
-                }
-              ].map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  variants={fadeInUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.2 }}
-                  className="group cursor-pointer"
-                  data-testid={`card-menu-item-${idx}`}
-                >
-                  <Card className="overflow-hidden border-none shadow-sm hover:shadow-2xl transition-all duration-500 rounded-2xl h-full bg-card -translate-y-0 hover:-translate-y-2">
-                    <div className="aspect-[4/3] overflow-hidden relative">
-                      <img 
-                        src={item.img} 
-                        alt={item.title} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
-                      />
-                      {item.steam && (
-                        <div className="absolute inset-0 pointer-events-none">
-                          <div className="steam"></div>
-                          <div className="steam"></div>
-                          <div className="steam"></div>
-                        </div>
-                      )}
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              {/* Featured image column */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="space-y-4 hidden lg:block"
+              >
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl group relative">
+                  <img src={latteImg} alt="Café Latte with heart art" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 pointer-events-none">
+                    <div className="steam"></div>
+                    <div className="steam"></div>
+                    <div className="steam"></div>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="aspect-square rounded-xl overflow-hidden group">
+                    <img src={cinnamonRollsImg} alt="Fresh baked pastries" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  </div>
+                  <div className="aspect-square rounded-xl overflow-hidden group">
+                    <img src={quicheImg} alt="Savory quiche" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Menu list column */}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={staggerContainer}
+                className="space-y-3"
+              >
+                {[
+                  {
+                    name: "The Nest",
+                    desc: "Our signature breakfast plate — built for a full morning.",
+                    price: "$9.00 – $11.00"
+                  },
+                  {
+                    name: "Breakfast Burrito",
+                    desc: "Stuffed with farm-fresh eggs, melted cheese, and savory fillings.",
+                    price: "$9.50 – $10.50"
+                  },
+                  {
+                    name: "Maple Donut",
+                    desc: "Hand-glazed each morning with real maple — warm, soft, irresistible.",
+                    price: "$3.00"
+                  },
+                  {
+                    name: "Café Latte",
+                    desc: "Velvety espresso pulled over silky steamed milk with signature heart art.",
+                    price: "$5.00 – $5.50"
+                  },
+                  {
+                    name: "Croissant Sandwich",
+                    desc: "Buttery, flaky croissant layered with your choice of savory fillings.",
+                    price: "$9.00"
+                  },
+                  {
+                    name: "614 Brew",
+                    desc: "Our house-crafted cold brew — smooth, bold, and local through and through.",
+                    price: "$5.00 – $5.50"
+                  }
+                ].map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    variants={fadeInUp}
+                    transition={{ delay: idx * 0.1 }}
+                    className="group"
+                    data-testid={`card-menu-item-${idx}`}
+                  >
+                    <div className="flex items-start justify-between gap-4 p-5 rounded-xl bg-card border border-border/40 hover:border-primary/30 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg font-serif text-foreground group-hover:text-primary transition-colors">{item.name}</h3>
+                        <p className="text-sm text-muted-foreground font-light mt-0.5 leading-relaxed">{item.desc}</p>
+                      </div>
+                      <div className="shrink-0 text-right">
+                        <span className="text-base font-medium text-primary whitespace-nowrap">{item.price}</span>
+                      </div>
                     </div>
-                    <CardContent className="p-8 text-center bg-card">
-                      <h3 className="text-2xl font-serif mb-3 text-foreground">{item.title}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-            
-            <div className="mt-16 text-center">
-              <Button variant="outline" className="rounded-full px-8 border-primary text-primary hover:bg-primary hover:text-white transition-colors" data-testid="button-full-menu">
-                View Full Menu
-              </Button>
+                  </motion.div>
+                ))}
+
+                <div className="pt-4">
+                  <Button variant="outline" className="w-full rounded-full px-8 border-primary text-primary hover:bg-primary hover:text-white transition-colors h-12" data-testid="button-full-menu">
+                    View Full Menu
+                  </Button>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
