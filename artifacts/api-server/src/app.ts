@@ -1,57 +1,29 @@
-import express, { Router, Request, Response } from "express";
+import express, { Express, Request, Response } from "express";
 
-const router: Router = express.Router();
+const app: Express = express();
 
-// Example API route
-router.get("/", (req: Request, res: Response): void => {
-  res.json({
-    message: "Welcome to Red Hen Café API",
-    version: "1.0.0",
-  });
+app.use(express.json());
+
+// Root endpoint
+app.get("/", (req: Request, res: Response) => {
+  res.json({ message: "Red Hen Café API is running!" });
 });
 
-// Menu endpoint
-router.get("/menu", (req: Request, res: Response): void => {
+// Health check
+app.get("/health", (req: Request, res: Response) => {
+  res.json({ status: "ok" });
+});
+
+// Menu
+app.get("/api/menu", (req: Request, res: Response) => {
   res.json({
     items: [
-      {
-        id: 1,
-        name: "Fresh Baked Bread",
-        price: 5.99,
-        category: "bakery",
-      },
-      {
-        id: 2,
-        name: "Espresso",
-        price: 3.5,
-        category: "coffee",
-      },
-      {
-        id: 3,
-        name: "Pastry",
-        price: 4.99,
-        category: "bakery",
-      },
+      { id: 1, name: "Coffee", price: 3.5 },
+      { id: 2, name: "Bread", price: 5.99 },
+      { id: 3, name: "Pastry", price: 4.99 },
     ],
   });
 });
 
-// Gallery endpoint
-router.get("/gallery", (req: Request, res: Response): void => {
-  res.json({
-    images: [
-      {
-        id: 1,
-        title: "Coffee Setup",
-        url: "/images/coffee.jpg",
-      },
-      {
-        id: 2,
-        title: "Bakery",
-        url: "/images/bakery.jpg",
-      },
-    ],
-  });
-});
-
-export default router;
+// Export for Vercel
+export default app;
