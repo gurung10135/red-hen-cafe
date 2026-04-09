@@ -21,7 +21,6 @@ import teamImg from "@assets/469432822_548860448015271_1469372937806594520_n_177
 import coffeeCupImg from "@assets/469258901_548049778096338_7910610469085467927_n_1775752676969.jpg";
 import diningImg from "@assets/469201690_546875284880454_5915036182464019531_n_1775752676970.jpg";
 import diningRoom2Img from "@assets/0_1775752676970.jpg";
-import storefrontExtImg from "@assets/front-and-rear-photos_1775752928643.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -114,7 +113,7 @@ export default function Home() {
             style={{ y: yHero }}
             className="absolute inset-0 z-0"
           >
-            <div className="absolute inset-0 bg-black/65 z-10" />
+            <div className="absolute inset-0 bg-black/55 z-10" />
             <img 
               src={heroBgImg} 
               alt="The Red Hen Café & Bakery building exterior" 
@@ -133,10 +132,10 @@ export default function Home() {
               <motion.span variants={fadeInUp} className="inline-block py-1 px-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium tracking-wider uppercase mb-4">
                 Plain City, Ohio
               </motion.span>
-              <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium leading-tight text-white" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.8), 0 4px 40px rgba(0,0,0,0.5)" }} data-testid="text-hero-title">
+              <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium leading-tight text-white shadow-sm" data-testid="text-hero-title">
                 Freshly Baked.<br />Warmly Served.
               </motion.h1>
-              <motion.p variants={fadeInUp} className="text-lg md:text-xl text-white font-light max-w-xl mx-auto" style={{ textShadow: "0 1px 12px rgba(0,0,0,0.9)" }}>
+              <motion.p variants={fadeInUp} className="text-lg md:text-xl text-white/90 font-light max-w-xl mx-auto">
                 Step into the warmth. We're a beloved neighborhood bakery and café crafting quality coffee and artisan goods every single morning.
               </motion.p>
               <motion.div variants={fadeInUp} className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -432,12 +431,6 @@ export default function Home() {
                 className="col-span-2 md:col-span-1 aspect-video md:aspect-square rounded-2xl overflow-hidden group"
               >
                 <img src={teamImg} alt="The Red Hen team" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }}
-                className="col-span-2 md:col-span-3 aspect-video rounded-2xl overflow-hidden group"
-              >
-                <img src={storefrontExtImg} alt="The Red Hen Café & Bakery exterior on a sunny day" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" loading="lazy" />
               </motion.div>
             </div>
           </div>
