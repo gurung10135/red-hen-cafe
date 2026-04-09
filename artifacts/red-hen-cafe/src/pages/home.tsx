@@ -20,7 +20,6 @@ import chalkMenuImg from "@assets/468753784_17948430992867914_791841818390615195
 import teamImg from "@assets/469432822_548860448015271_1469372937806594520_n_1775752676969.jpg";
 import coffeeCupImg from "@assets/469258901_548049778096338_7910610469085467927_n_1775752676969.jpg";
 import diningImg from "@assets/469201690_546875284880454_5915036182464019531_n_1775752676970.jpg";
-import diningRoom2Img from "@assets/0_1775752676970.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -422,13 +421,7 @@ export default function Home() {
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}
-                className="col-span-2 md:col-span-2 aspect-video rounded-2xl overflow-hidden group"
-              >
-                <img src={diningRoom2Img} alt="Full dining room at The Red Hen" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.45 }}
-                className="col-span-2 md:col-span-1 aspect-video md:aspect-square rounded-2xl overflow-hidden group"
+                className="col-span-2 md:col-span-3 aspect-video rounded-2xl overflow-hidden group"
               >
                 <img src={teamImg} alt="The Red Hen team" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" loading="lazy" />
               </motion.div>
