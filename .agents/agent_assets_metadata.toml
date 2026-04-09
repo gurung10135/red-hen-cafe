@@ -1,0 +1,38 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "BhoFfnQK6DKdgGdpkeego"
+uri = "file://artifacts/red-hen-cafe/src/assets/latte.png"
+type = "image"
+title = "Warm latte with heart art"
+
+[[generated]]
+id = "EhrrYL_SuFMQ9OieBZgyS"
+uri = "file://artifacts/red-hen-cafe/src/assets/cinnamon-rolls.png"
+type = "image"
+title = "Fresh cinnamon rolls"
+
+[[generated]]
+id = "Y0e7AceHs5JOWgWhhWOZD"
+uri = "file://artifacts/red-hen-cafe/src/assets/quiche.png"
+type = "image"
+title = "Fresh quiche"
+
+[[generated]]
+id = "ObdO4PEAlEXsEQfRfpqZW"
+uri = "file://artifacts/red-hen-cafe/src/assets/interior.png"
+type = "image"
+title = "Cozy café interior"
+
+[[generated]]
+id = "WAFH-wvDUabsT6XFojlsU"
+uri = "file://artifacts/red-hen-cafe/src/assets/display-case.png"
+type = "image"
+title = "Bakery display case"
+
+[[generated]]
+id = "e9OlTf0MsfrrSDMeuwu35"
+uri = "file://artifacts/red-hen-cafe/src/assets/storefront.png"
+type = "image"
+title = "Outdoor storefront"

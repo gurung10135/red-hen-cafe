@@ -1,0 +1,130 @@
+Design and build a modern, elegant, 3D animated and interactive website for a café named “The Red Hen Café & Bakery”, located in Plain City, Ohio. The café is known for its warm atmosphere, fresh bakery items, and high-quality coffee, with a strong local reputation.
+
+🎨 Visual Identity & Style
+Warm, inviting, bakery-inspired aesthetic
+Color palette:
+Soft cream, warm beige, muted red accents (brand-inspired)
+Light wood textures + subtle grain
+Typography:
+Elegant serif for headings
+Clean sans-serif for body
+Use premium minimal icons (no emojis)
+Overall feel: cozy, handcrafted, welcoming but refined
+🧊 3D & Interactive Experience
+Hero section with:
+3D rotating coffee cup OR pastry display
+Subtle parallax scrolling (bread, coffee, bakery textures)
+Smooth hover animations:
+Lift + shadow (very soft)
+Cursor-based gentle tilt effect
+Image transitions:
+Smooth fade / slide (no flashy effects)
+Add steam animation from coffee (subtle)
+🏠 Pages / Sections
+1. Hero Section
+Title: The Red Hen Café & Bakery
+Tagline:
+“Freshly Baked. Warmly Served.”
+CTA buttons:
+View Menu
+Visit Us
+2. About Section
+Story:
+A cozy local café known for great food, friendly staff, and welcoming vibe
+Highlight:
+Fresh bakery items
+Comfortable dine-in experience
+Popular local spot
+3. Menu Section (Interactive)
+Highlight items:
+Creamy Latte with heart art
+Quiche
+Cinnamon rolls
+Donuts
+Use clean cards:
+Hover → soft lift + slight zoom
+CTA: View Full Menu
+4. Experience Section
+Showcase:
+Warm atmosphere
+Indoor seating
+Busy, lively vibe
+Add:
+Smooth image gallery
+Subtle motion transitions
+5. Reviews Section
+Display:
+4.8 / 5 rating (375 reviews)
+Include testimonials:
+“Nice place, good atmosphere, good service, and great coffee!”
+“Good prices, great food, quick service and friendly staff!”
+“The wait is worth it!”
+Layout:
+Clean cards
+Minimal star icons
+Smooth sliding animation
+6. 📍 Location Page (Premium)
+
+Create a dedicated Location page.
+
+Layout:
+Split screen:
+Left → Dark-themed interactive map
+Right → Info panel
+Map:
+Address:
+542 W Main St, Plain City, OH 43064, United States
+Custom minimal marker
+Soft pulse animation
+Smooth zoom-in effect
+Info Panel:
+Status:
+Open · Closes 2:30 PM
+Price:
+$10–20 per person
+Phone:
+(+1 614-733-0421)
+Services (use icons, not emojis):
+Dine-in
+Drive-through
+Buttons:
+Get Directions
+Call Now
+Visit Website
+7. Call to Action
+Text: “Visit The Red Hen Today”
+Clean button design
+Subtle hover animation
+⚡ UX & Motion
+Smooth scrolling (premium feel)
+Soft page transitions (fade + scale)
+Loading animation:
+Coffee steam or bakery oven glow
+Fully responsive
+🔍 Built-in SEO Optimization (IMPORTANT)
+Page Title:
+The Red Hen Café & Bakery – Best Coffee Shop in Plain City Ohio
+Keywords:
+coffee shop in Plain City Ohio
+bakery near me
+best breakfast café Plain City
+Include location naturally in text
+Optimize images:
+Example: red-hen-latte.jpg
+Add Google Maps embed
+💡 Premium Rules
+No emojis anywhere
+No bright/neon colors
+No cluttered layout
+Focus on:
+spacing
+typography
+smooth motion
+🧠 Goal
+
+The website should feel:
+
+Warm and inviting
+Authentic and local
+High-quality but not overly flashy
+Designed with taste and restraint
