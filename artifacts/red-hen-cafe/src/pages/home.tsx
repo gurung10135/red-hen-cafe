@@ -12,6 +12,15 @@ import displayCaseImg from "../assets/display-case.png";
 import storefrontImg from "../assets/storefront.png";
 import heroBgImg from "@assets/469102267_545950394972943_3540041843313371639_n_1775752436549.jpg";
 import logoImg from "@assets/312021854_121989427169656_1473103766871661946_n._1775752046583.jpg";
+import realInteriorImg from "@assets/468672704_17948328548867914_6069729687180762212_n_1775752676968.jpg";
+import baristaImg from "@assets/469151097_546864374881545_9096252841785697923_n_1775752676969.jpg";
+import winterInteriorImg from "@assets/473768863_17953818605867914_8021034871630041634_n_1775752676967.jpg";
+import springMenuImg from "@assets/643590742_17997488516867914_5573594433919961960_n_1775752676968.jpg";
+import chalkMenuImg from "@assets/468753784_17948430992867914_7918418183906151952_n_1775752676968.jpg";
+import teamImg from "@assets/469432822_548860448015271_1469372937806594520_n_1775752676969.jpg";
+import coffeeCupImg from "@assets/469258901_548049778096338_7910610469085467927_n_1775752676969.jpg";
+import diningImg from "@assets/469201690_546875284880454_5915036182464019531_n_1775752676970.jpg";
+import diningRoom2Img from "@assets/0_1775752676970.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -187,11 +196,11 @@ export default function Home() {
                 className="relative"
               >
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative">
-                  <img src={interiorImg} alt="Cozy cafe interior" className="w-full h-full object-cover transition-transform hover:scale-105 duration-1000" data-testid="img-about-interior" />
+                  <img src={realInteriorImg} alt="The Red Hen Café interior with hen wall art" className="w-full h-full object-cover transition-transform hover:scale-105 duration-1000" data-testid="img-about-interior" />
                   <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl"></div>
                 </div>
                 <div className="absolute -bottom-8 -left-8 w-48 aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-background hidden md:block">
-                  <img src={displayCaseImg} alt="Bakery display case" className="w-full h-full object-cover" />
+                  <img src={baristaImg} alt="Barista crafting espresso" className="w-full h-full object-cover" />
                 </div>
               </motion.div>
             </div>
@@ -360,23 +369,68 @@ export default function Home() {
           <div className="container px-6 mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-serif text-foreground mb-4">Life at The Red Hen</h2>
-              <p className="text-muted-foreground">Follow along on our journey.</p>
+              <p className="text-muted-foreground">A glimpse inside our café and bakery.</p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="aspect-square rounded-xl overflow-hidden group">
-                <img src={latteImg} alt="Latte" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+
+            {/* Masonry-style grid using real photos */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {/* Row 1 — tall left, two stacked right */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.05 }}
+                className="row-span-2 rounded-2xl overflow-hidden group"
+                style={{ gridRow: "span 2" }}
+              >
+                <img src={realInteriorImg} alt="Café interior with signature hen wall art" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
               </motion.div>
-              <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="aspect-square rounded-xl overflow-hidden group">
-                <img src={storefrontImg} alt="Storefront" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
+                className="aspect-square rounded-2xl overflow-hidden group"
+              >
+                <img src={coffeeCupImg} alt="Red Hen branded coffee cup" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
               </motion.div>
-              <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="aspect-square rounded-xl overflow-hidden group">
-                <img src={quicheImg} alt="Quiche" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }}
+                className="aspect-square rounded-2xl overflow-hidden group"
+              >
+                <img src={baristaImg} alt="Barista at the espresso machine" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
               </motion.div>
-              <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="aspect-square rounded-xl overflow-hidden group flex items-center justify-center bg-primary text-white">
-                <a href="#" className="text-center group-hover:scale-110 transition-transform duration-300">
-                  <Instagram className="w-10 h-10 mx-auto mb-2" />
-                  <span className="font-serif block">@theredhen</span>
-                </a>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
+                className="aspect-square rounded-2xl overflow-hidden group"
+              >
+                <img src={chalkMenuImg} alt="Seasonal drinks chalkboard menu" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.25 }}
+                className="aspect-square rounded-2xl overflow-hidden group"
+              >
+                <img src={springMenuImg} alt="Spring specialty drink menu" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              </motion.div>
+
+              {/* Row 2 */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
+                className="aspect-square rounded-2xl overflow-hidden group"
+              >
+                <img src={diningImg} alt="Guests dining at the counter" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.35 }}
+                className="aspect-square rounded-2xl overflow-hidden group"
+              >
+                <img src={winterInteriorImg} alt="Café interior in winter with warm pendant light" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}
+                className="col-span-2 md:col-span-2 aspect-video rounded-2xl overflow-hidden group"
+              >
+                <img src={diningRoom2Img} alt="Full dining room at The Red Hen" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.45 }}
+                className="col-span-2 md:col-span-1 aspect-video md:aspect-square rounded-2xl overflow-hidden group"
+              >
+                <img src={teamImg} alt="The Red Hen team" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" loading="lazy" />
               </motion.div>
             </div>
           </div>
