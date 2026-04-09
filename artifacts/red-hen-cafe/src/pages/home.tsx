@@ -21,6 +21,7 @@ import teamImg from "@assets/469432822_548860448015271_1469372937806594520_n_177
 import coffeeCupImg from "@assets/469258901_548049778096338_7910610469085467927_n_1775752676969.jpg";
 import diningImg from "@assets/469201690_546875284880454_5915036182464019531_n_1775752676970.jpg";
 import pastryImg from "@assets/619213292_17992910345867914_2551508665060073533_n_1775753881985.jpg";
+import bookImg from "@assets/489735082_17963444159867914_5114749389984527218_n_1775754162733.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -419,6 +420,12 @@ export default function Home() {
                 className="aspect-square rounded-2xl overflow-hidden group"
               >
                 <img src={winterInteriorImg} alt="Café interior in winter with warm pendant light" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.38 }}
+                className="aspect-square rounded-2xl overflow-hidden group"
+              >
+                <img src={bookImg} alt="R is for Red Hen Café and Bakery children's book" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}
